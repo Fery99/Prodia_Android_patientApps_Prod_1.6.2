@@ -5,59 +5,45 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pages.pageOfProdiaMobile;
+import pages.LoginPage;
 
-public class stepDef {
+public class Login_stepDef {
 
-    pageOfProdiaMobile pageOfProdia = new pageOfProdiaMobile();
+    LoginPage pageOfProdia = new LoginPage();
 
-
-    @Given("^: user on login dashboard$")
+    @Given("^user on login dashboard$")
     public void userOnLoginDashboard() {
         pageOfProdia.userOnLoginDashboard();
-
     }
 
-    @When("^: user click Login button$")
+    @When("^user click Login button$")
     public void userClickLoginButton() {
         pageOfProdia.userClickLoginButton();
-
     }
 
-//    @When("^: user input username \"([^\"]*)\"$")
-//    public void userInputUsername(String username) throws Throwable {
-//
-//        // Write code here that turns the phrase above into concrete actions
-//        throw new PendingException();
-//    }
-
-    @And("^: user input username \\(\"([^\"]*)\"\\)$")
+    @And("^user input username \"([^\"]*)\"$")
     public void userInputUsername(String username) throws Throwable {
         pageOfProdia.userInputUsername(username);
 
-        throw new PendingException();
     }
 
-    @And("^: user input password \"([^\"]*)\"$")
+    @And("^user input password \"([^\"]*)\"$")
     public void userInputPassword(String password) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         pageOfProdia.userInputPassword(password);
-        throw new PendingException();
+
     }
 
-    @And("^: user click button$")
+    @And("^user click button$")
     public void userClickButton() {
         pageOfProdia.userClickButton();
+
+
     }
 
-    @Then("^: user on homepage dashboard$")
-    public void userOnHomepageDashboard(String screenName) {
-        pageOfProdia.userOnHomepageDashboard(screenName);
-    }
+    @And("^user on homepage dashboard$")
+    public void userOnHomepageDashboard() {
+        pageOfProdia.userOnHomepageDashboard();
 
-    @And("^: user can enter automation$")
-    public void userCanEnterAutomation() {
-        pageOfProdia.userCanEnterAutomation();
     }
 }
 

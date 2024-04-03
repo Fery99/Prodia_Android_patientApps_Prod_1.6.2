@@ -7,7 +7,7 @@ import org.testng.Assert;
 import utils.AndroidUtils;
 import utils.AppiumDriverFactory;
 
-public class pageOfProdiaMobile {
+public class LoginPage {
 
     AppiumDriver driver;
     AppiumDriverFactory appiumDriverFactory = AppiumDriverFactory.getInstanceOfAppiumDriverFactory();
@@ -130,23 +130,17 @@ public class pageOfProdiaMobile {
         userclickbutton.click();
     }
 
-    public void userOnHomepageDashboard(String screenName){
+    public void userOnHomepageDashboard(){
         driver = appiumDriverFactory.getDriver();
-        if(androidUtils.Assert(input_userOnHomepageDashboard)){
-            Assert.assertTrue(true,"Health Score Assessment"+screenName);
-        }else{
-            Assert.assertTrue(false,"failed to be in "+screenName);
-        }
+        androidUtils = new AndroidUtils(driver);
+
+        Assert.assertTrue(androidUtils.Assert(input_userOnHomepageDashboard), "Health Score Assessment");
 
         try{
             Thread.sleep(2000);
         }catch (InterruptedException e){
             e.printStackTrace();
         }
-
-    }
-
-    public void userCanEnterAutomation(){
 
     }
 

@@ -1,10 +1,11 @@
 Feature: Prodia Mobile
 
-  @apaiya
-  Scenario: Prodia Kita Coba Login
-    Given : user on login dashboard
-    When : user click Login button
-    And : user input username ("braw001@yopmail.com")
-    And : user input password "Test1234"
-    And : user click button
-    Then : user on homepage dashboard
+  @Login
+  Scenario: user try to login and use Prodia patiens Apps
+    Given user on login dashboard
+    When user click Login button
+    And user input username "ferysadewaa@gmail.com"
+    And user input password "Fery1304"
+    And user click button
+    And user on homepage dashboard
+    
