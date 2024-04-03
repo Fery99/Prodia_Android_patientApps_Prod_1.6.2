@@ -8,4 +8,3 @@ Feature: Prodia Mobile
     And user input password "Fery1304"
     And user click button
     And user on homepage dashboard
-    
