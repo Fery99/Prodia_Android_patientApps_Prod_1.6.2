@@ -19,7 +19,7 @@ import io.appium.java_client.AppiumDriver;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"steps"},
-//        tags = {"@apaiya"},
+        tags = {"@MyProfile"},
         format = {
                 "pretty",
                 "html:target/cucumber-reports/cucumber-pretty",

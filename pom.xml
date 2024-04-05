@@ -4,7 +4,14 @@
   <artifactId>All_Module</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
-		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<!--	  &lt;!&ndash; https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer &ndash;&gt;-->
+<!--	  <dependency>-->
+<!--		  <groupId>io.cucumber</groupId>-->
+<!--		  <artifactId>cucumber-picocontainer</artifactId>-->
+<!--		  <version>7.16.1</version>-->
+<!--	  </dependency>-->
+
+	  <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<!-- Test NG -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -12,13 +19,13 @@
 			<version>7.0.0</version>
 			<!-- <scope>compile</scope> -->
 		</dependency>
-
 		<!-- Appium -->
 		<dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
 			<version>7.6.0</version>
 		</dependency>
+
 		<!-- Selenium -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>

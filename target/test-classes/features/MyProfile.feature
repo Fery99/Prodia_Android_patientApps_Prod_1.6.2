@@ -1,5 +1,4 @@
 Feature: Prodia Mobile
-# ini feature kedua punya  masalah sama null nyaa untuk stepdef ke page nya
 
   @MyProfile
   Scenario: user can View profile

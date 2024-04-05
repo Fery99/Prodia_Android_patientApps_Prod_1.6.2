@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Test Automation" duration-ms="29410" started-at="2024-04-04T22:36:16 WIB" finished-at="2024-04-04T22:36:45 WIB">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestNGRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runners.TestNGRunner@31ef45e3]" name="feature" class="runners.TestNGRunner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Pest Automation" duration-ms="29410" started-at="2024-04-04T22:36:16 WIB" finished-at="2024-04-04T22:36:45 WIB">
+      <class name="runners.TestNGRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runners.TestNGRunner@31ef45e3]" name="setUpClass" is-config="true" duration-ms="234" started-at="2024-04-04T22:36:16 WIB" finished-at="2024-04-04T22:36:16 WIB">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runners.TestNGRunner@31ef45e3]" name="feature" duration-ms="28435" started-at="2024-04-04T22:36:16 WIB" description="Runs Cucumber Feature" data-provider="features" finished-at="2024-04-04T22:36:45 WIB">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Prodia Mobile]]>
+              </value>
+            </param>
+          </params>
+          <exception class="cucumber.runtime.CucumberException">
+            <message>
+              <![CDATA[java.lang.AssertionError:  did not expect to find [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[cucumber.runtime.CucumberException: java.lang.AssertionError:  did not expect to find [true] but found [false]
+at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+at runners.TestNGRunner.feature(TestNGRunner.java:48)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:41)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:443)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:67)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.AssertionError:  did not expect to find [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:969)
+at org.testng.Assert.assertTrue(Assert.java:43)
+at pages.SIgninpage.userOnLoginDashboard(SIgninpage.java:30)
+at steps.Signin_stepDef.userOnLoginDashboard(Signin_stepDef.java:24)
+at ✽.Given user on login dashboard(MyProfile.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- cucumber.runtime.CucumberException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runners.TestNGRunner@31ef45e3]" name="tearDownClass" is-config="true" duration-ms="602" started-at="2024-04-04T22:36:45 WIB" finished-at="2024-04-04T22:36:45 WIB">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runners.TestNGRunner -->
+    </test> <!-- Pest Automation -->
+  </suite> <!-- Test Automation -->
+</testng-results>

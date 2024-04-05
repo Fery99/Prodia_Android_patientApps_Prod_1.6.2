@@ -1,25 +1,35 @@
 package steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pages.LoginPage;
+import pages.SIgninpage;
 
-public class Login_stepDef {
+public class Signin_stepDef {
+//ini elementnya ngga ada masalah kareana feature pertama
+    private SIgninpage pageOfProdia;
 
-    LoginPage pageOfProdia = new LoginPage();
+    // Konstruktor untuk injeksi dependensi
+    public Signin_stepDef(SIgninpage pageOfProdia) {
+        this.pageOfProdia = pageOfProdia;
+    }
+
+    // Konstruktor kosong tanpa parameter
+    public Signin_stepDef() {
+        this.pageOfProdia = new SIgninpage();
+    }
 
     @Given("^user on login dashboard$")
     public void userOnLoginDashboard() {
         pageOfProdia.userOnLoginDashboard();
     }
 
-    @When("^user click Login button$")
-    public void userClickLoginButton() {
+
+    @When("^user tap Login button$")
+    public void userTapLoginButton() {
         pageOfProdia.userClickLoginButton();
     }
+
 
     @And("^user input username \"([^\"]*)\"$")
     public void userInputUsername(String username) throws Throwable {
@@ -33,17 +43,22 @@ public class Login_stepDef {
 
     }
 
-    @And("^user click button$")
-    public void userClickButton() {
+
+    @And("^user tap button$")
+    public void userTapButton() {
         pageOfProdia.userClickButton();
-
-
     }
+
 
     @And("^user on homepage dashboard$")
     public void userOnHomepageDashboard() {
         pageOfProdia.userOnHomepageDashboard();
 
+    }
+
+    @And("^user tap on$")
+    public void userTapOn() {
+        pageOfProdia.userTapOn();
     }
 }
 
