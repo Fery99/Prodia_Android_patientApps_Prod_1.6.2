@@ -1,20 +1,18 @@
 package runners;
 
 import java.io.File;
-
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
+import org.testng.annotations.*;
 import com.cucumber.listener.Reporter;
 import utils.AppiumDriverFactory;
 import utils.ConfigFileReader;
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 import io.appium.java_client.AppiumDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import io.appium.java_client.MobileElement;
+
 
 @CucumberOptions(
         features = "src/test/resources/features",
@@ -30,13 +28,14 @@ import io.appium.java_client.AppiumDriver;
 
 
 public class TestNGRunner {
-    private TestNGCucumberRunner testNGCucumberRunner;
+    private static TestNGCucumberRunner testNGCucumberRunner;
 
-    /*
-     * AppiumDriverFactory appiumDriverFactory =
-     * AppiumDriverFactory.getInstanceOfAppiumDriverFactory(); AppiumDriver driver =
-     * appiumDriverFactory.getDriver();
-     */
+//    private TestNGCucumberRunner testNGCucumberRunner;
+
+    AppiumDriverFactory appiumDriverFactory =
+            AppiumDriverFactory.getInstanceOfAppiumDriverFactory(); AppiumDriver driver = appiumDriverFactory.getDriver();
+
+
 
     @BeforeClass(alwaysRun = true)
     public void setUpClass() throws Exception {
@@ -53,12 +52,27 @@ public class TestNGRunner {
         return testNGCucumberRunner.provideFeatures();
     }
 
+    @AfterSuite(alwaysRun = true)
+    public static void tearDownClass() throws Exception {
+        if (testNGCucumberRunner != null) {
+            testNGCucumberRunner.finish();
+        }
+    }
     @AfterClass(alwaysRun = true)
-    public void tearDownClass() throws Exception {
-        //driver.quit();
+    public void afterclass() throws Exception {
+//        driver.quit();
+        quitDriver();
         Reporter.loadXMLConfig(new File(ConfigFileReader.getConfigPropertyVal("reportConfigPath")));
-        testNGCucumberRunner.finish();
+//        testNGCucumberRunner.finish();
 
     }
 
+
+    private static void quitDriver() {
+        AppiumDriverFactory appiumDriverFactory = AppiumDriverFactory.getInstanceOfAppiumDriverFactory();
+        AppiumDriver driver = appiumDriverFactory.getDriver();
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }

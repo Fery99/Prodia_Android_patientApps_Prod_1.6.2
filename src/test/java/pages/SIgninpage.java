@@ -16,11 +16,11 @@ public class SIgninpage {
     //androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View[2]/android.widget.Button
     public static final By input_assertFirstPage= By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View[3]\n");
     public static final By input_userClickLoginButton= By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View[2]");
-    private static final By Input_userInputUsername= By.xpath("//android.widget.ScrollView/android.widget.EditText[1]\n");
-    private  static final By input_userInputPassword= By.xpath("//android.widget.ScrollView/android.widget.EditText[2]\n");
-    private static  final By input_userClickButton= By.xpath("//android.widget.ScrollView/android.view.View[3]\n");
-    private  static final By input_userOnHomepageDashboard=By.xpath("//android.widget.TextView[@text=\"Health Score Assessment\"]\n");
-    private static final By input_tapbuttons = By.xpath("//androidx.compose.ui.platform.ComposeView[@resource-id=\"com.prodiadigital.patient:id/compose_view\"]/android.view.View/android.view.View/android.view.View[1]\n");
+    public static final By Input_userInputUsername= By.xpath("//android.widget.ScrollView/android.widget.EditText[1]\n");
+    public static final By input_userInputPassword= By.xpath("//android.widget.ScrollView/android.widget.EditText[2]\n");
+    public static  final By input_userClickButton= By.xpath("//android.widget.ScrollView/android.view.View[3]\n");
+    public static final By input_userOnHomepageDashboard=By.xpath("//android.widget.TextView[@text=\"Health Score Assessment\"]\n");
+    public static final By input_tapbuttons = By.xpath("//androidx.compose.ui.platform.ComposeView[@resource-id=\"com.prodiadigital.patient:id/compose_view\"]/android.view.View/android.view.View/android.view.View[1]\n");
 
     public void userOnLoginDashboard(){
         driver = appiumDriverFactory.getDriver();

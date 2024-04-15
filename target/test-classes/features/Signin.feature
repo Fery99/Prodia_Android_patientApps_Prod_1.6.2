@@ -1,6 +1,6 @@
-Feature: Prodia Mobile
+Feature: Prodia Mobile Sign In
 
-  @Signin
+  @SignIn
   Scenario: user try to login and use Prodia patiens Apps
     Given user on login dashboard
     When user tap Login button
@@ -8,4 +8,5 @@ Feature: Prodia Mobile
     And user input password "Fery1304"
     And user tap button
     And user on homepage dashboard
+#    cek element my profile
     And user tap on

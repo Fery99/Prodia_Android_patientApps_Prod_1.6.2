@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import io.appium.java_client.MobileElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumDriver;
@@ -14,6 +15,13 @@ public class AppiumDriverFactory {
 	
 	private static AppiumDriverFactory instanceOfAppiumDriverFactory = null;
 	private AppiumDriver<AndroidElement> driver;
+
+
+//	public AppiumDriver<MobileElement> driver;
+
+//	private AppiumDriverFactory(AppiumDriver<AndroidElement> driver) {
+//		this.driver = driver;
+//	}
 	
 	
 	private static String appPackage = ConfigFileReader.getConfigPropertyVal("appPackage");
@@ -55,4 +63,6 @@ public class AppiumDriverFactory {
 		
 		return driver;
 	}
+
+
 }

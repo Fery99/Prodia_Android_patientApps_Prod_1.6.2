@@ -1,6 +1,6 @@
-Feature: Prodia Mobile
-# ini feature pertama ngga ada masalah sama null nyaa
-  @Signin
+Feature: Prodia Mobile Sign In
+
+  @SignIn
   Scenario: user try to login and use Prodia patiens Apps
     Given user on login dashboard
     When user tap Login button

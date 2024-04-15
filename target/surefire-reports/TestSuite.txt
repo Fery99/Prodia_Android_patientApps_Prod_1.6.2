@@ -1,9 +1,0 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 30 s <<< FAILURE! - in TestSuite
-feature(runners.TestNGRunner)  Time elapsed: 28.45 s  <<< FAILURE!
-cucumber.runtime.CucumberException: java.lang.AssertionError:  did not expect to find [true] but found [false]
-	at runners.TestNGRunner.feature(TestNGRunner.java:48)
-Caused by: java.lang.AssertionError:  did not expect to find [true] but found [false]
-
