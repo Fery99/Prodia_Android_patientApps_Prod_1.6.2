@@ -7,5 +7,5 @@ https://github.com/Fery99/Prodia_Android_patientApps_Prod_1.6.2/assets/112610926
 
 Result Testing:
 
-<img width="839" alt="Screenshot 2024-04-05 at 11 47 09" src="https://github.com/Fery99/Prodia_Android_patientApps_Prod_1.6.2/assets/112610926/e2d87826-9767-4675-94ee-1547b6ed90d7">
+<img width="1440" alt="Screenshot 2024-04-17 at 11 34 36" src="https://github.com/Fery99/Prodia_Android_patientApps_Prod_1.6.2/assets/112610926/97c0dfcc-9127-4d61-9ebb-634a2286e9da">
 
