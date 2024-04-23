@@ -9,11 +9,6 @@ public class Signin_stepDef {
 //ini elementnya ngga ada masalah kareana feature pertama
     SIgninpage pageOfProdia;
 
-//    // Konstruktor untuk injeksi dependensi
-//    public Signin_stepDef(SIgninpage pageOfProdia) {
-//        this.pageOfProdia = pageOfProdia;
-//    }
-
     // Konstruktor kosong tanpa parameter
     public Signin_stepDef() {
         this.pageOfProdia = new SIgninpage();
@@ -60,6 +55,9 @@ public class Signin_stepDef {
     public void userTapOn() {
         pageOfProdia.userTapOn();
     }
+
+
+
 }
 
 
