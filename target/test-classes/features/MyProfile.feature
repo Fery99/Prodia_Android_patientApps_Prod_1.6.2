@@ -46,35 +46,35 @@ Feature: My Profile (View Profile, Change Photo, Add Address, Delete Address, Ed
     Then user tap back to Page Account from my Addres
 
 
-#  @MyProfile
-#  Scenario: user can edit addres
-#    Given user on page Account
-#    When user tap Address List
-#    And user on page My Address
-#    And user tap other option
-#    And user tap Edit Address
-#    And user on page edit address
-#    And user tap address detail
-#    And user tap search address column
-#    And user tap search address and input "Aufa Residence"
-#    And user tap address selected from list, for edit
-#    And user tap save button on page address
-#    And user input address name "My Kost At Jakarta"
-#    And user input additional Notes "EDIT"
-#    And user save buton on edit address
-#    Then user on page My Address
-#    Then user tap back to Page Account from my Addres
-#
-#
-#  @MyProfile
-#  Scenario: user can delete addres
-#    Given user on page Account
-#    When user tap Address List
-#    And user on page My Address
-#    And user tap other option
-#    And user tap Delete Address
-#    And user tap yes,delete address option
-#    Then user on page My Address
+  @MyProfile
+  Scenario: user can edit addres
+    Given user on page Account
+    When user tap Address List
+    And user on page My Address
+    And user tap other option
+    And user tap Edit Address
+    And user on page edit address
+    And user tap address detail
+    And user tap search address column
+    And user tap search address and input "Aufa Residence"
+    And user tap address selected from list, for edit
+    And user tap save button on page address
+    And user input address name "My Kost At Jakarta"
+    And user input additional Notes "EDIT"
+    And user save buton on edit address
+    Then user on page My Address
+    Then user tap back to Page Account from my Addres
+
+
+  @MyProfile
+  Scenario: user can delete addres
+    Given user on page Account
+    When user tap Address List
+    And user on page My Address
+    And user tap other option
+    And user tap Delete Address
+    And user tap yes,delete address option
+    Then user on page My Address
 
 
 
